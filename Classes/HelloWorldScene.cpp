@@ -1,5 +1,12 @@
 #include "HelloWorldScene.h"
 
+#ifdef MD5_QUICK
+#include "quick/QuickMD5.h"
+#else
+#include "cell/CellMD5.h"
+#endif
+
+
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -64,7 +71,7 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    auto sprite = Sprite::create("image.png");
 
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -75,17 +82,42 @@ bool HelloWorld::init()
     return true;
 }
 
+const char* text_file		= "text.txt" ;
+const char* text_zip		= "text.zip" ;
+
+const char* image_file		= "image.png" ;
+const char* image_zip		= "image.zip" ;
+
+
+void testMD5()
+{
+#ifdef MD5_QUICK
+	log("------------     testQuickMD5  start     ------------") ;
+	const std::string textMD5 = QuickMD5::getInstance()->MD5File(text_file) ;
+	const std::string textZipMD5 = QuickMD5::getInstance()->MD5File(text_zip) ;
+	const std::string imageMD5 = QuickMD5::getInstance()->MD5File(image_file) ;
+	const std::string imageZipMD5 = QuickMD5::getInstance()->MD5File(image_zip) ;
+	log("***   md5 = %s   ***   filename = %s   ***", textMD5.c_str(), text_file) ;
+	log("***   md5 = %s   ***   filename = %s   ***", textZipMD5.c_str(), text_zip) ;
+	log("***   md5 = %s   ***   filename = %s   ***", imageMD5.c_str(), image_file) ;
+	log("***   md5 = %s   ***   filename = %s   ***", imageZipMD5.c_str(), image_zip) ;
+	log("------------     testQuickMD5  end       ------------") ;
+#else
+	log("------------     testCellMD5  start     ------------") ;
+	const std::string textMD5 = CellMD5::getInstance()->MD5File(text_file) ;
+	const std::string textZipMD5 = CellMD5::getInstance()->MD5File(text_zip) ;
+	const std::string imageMD5 = CellMD5::getInstance()->MD5File(image_file) ;
+	const std::string imageZipMD5 = CellMD5::getInstance()->MD5File(image_zip) ;
+	log("***   md5 = %s   ***   filename = %s   ***", textMD5.c_str(), text_file) ;
+	log("***   md5 = %s   ***   filename = %s   ***", textZipMD5.c_str(), text_zip) ;
+	log("***   md5 = %s   ***   filename = %s   ***", imageMD5.c_str(), image_file) ;
+	log("***   md5 = %s   ***   filename = %s   ***", imageZipMD5.c_str(), image_zip) ;
+	log("------------     testCellMD5  end       ------------") ;
+#endif
+}
+
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
-    return;
-#endif
-
-    Director::getInstance()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
+    testMD5() ;
 }

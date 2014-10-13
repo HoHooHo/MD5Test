@@ -12,7 +12,11 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+                   ../../Classes/HelloWorldScene.cpp \
+                   ../../Classes/quick/QuickMD5.cpp \
+                   ../../Classes/quick/md5/md5.c \
+                   ../../Classes/cell/CellMD5.cpp \
+                   ../../Classes/cell/md5/md5.c
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

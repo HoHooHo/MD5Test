@@ -18,20 +18,43 @@
 
 
 **********************     mac     **********************
-cocos2d: ------------     testQuickMD5  start     ------------
-cocos2d: ***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
-cocos2d: ***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
-cocos2d: ***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
-cocos2d: ***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
-cocos2d: ------------     testQuickMD5  end       ------------
+------------     testQuickMD5  start     ------------
+***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
+***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
+***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
+***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
+------------     testQuickMD5  end       ------------
 
-cocos2d: ------------     testCellMD5  start     ------------
-cocos2d: ***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
-cocos2d: ***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
-cocos2d: ***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
-cocos2d: ***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
-cocos2d: ------------     testCellMD5  end       ------------
+------------     testCellMD5  start     ------------
+***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
+***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
+***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
+***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
+------------     testCellMD5  end       ------------
 
 
 
 **********************     android     **********************
+------------     testQuickMD5  start     ------------
+***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
+***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
+***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
+***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
+------------     testQuickMD5  end       ------------
+
+------------     testCellMD5  start     ------------
+***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
+***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
+***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
+***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
+------------     testCellMD5  end       ------------
+
+------------     android System  start     ------------
+***   md5 = b046366e25d7003821b31f1a737d7425   ***   filename = text.txt   ***
+***   md5 = 4af013d7bf7b30c440b4a3272cc69f97   ***   filename = text.zip   ***
+***   md5 = b638d131da4e7c2a9ce369f8a9857ede   ***   filename = image.png   ***
+***   md5 = aefd5d953b3387b97cdb05cf67fc6174   ***   filename = image.zip   ***
+------------     android System  end     ------------
+
+
+

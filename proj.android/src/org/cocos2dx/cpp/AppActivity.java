@@ -26,7 +26,69 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.cpp;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+
+import android.app.Activity;
+import android.os.Bundle;
 import org.cocos2dx.lib.Cocos2dxActivity;
 
 public class AppActivity extends Cocos2dxActivity {
+
+
+	String text_file		= "text.txt" ;
+	String text_zip		= "text.zip" ;
+
+	String image_file		= "image.png" ;
+	String image_zip		= "image.zip" ;
+
+	protected void onCreate(final Bundle savedInstanceState) {
+
+	  super.onCreate(savedInstanceState);	
+	  System.out.println("------------     android System  start     ------------") ;
+	  String fileName = text_file ;
+  	  System.out.println("***   md5 = " + getFileMD5(fileName) + "   ***   filename = " + fileName + "   ***");
+
+	  fileName = text_zip ;
+  	  System.out.println("***   md5 = " + getFileMD5(fileName) + "   ***   filename = " + fileName + "   ***");
+
+	  fileName = image_file ;
+  	  System.out.println("***   md5 = " + getFileMD5(fileName) + "   ***   filename = " + fileName + "   ***");
+
+	  fileName = image_zip ;
+  	  System.out.println("***   md5 = " + getFileMD5(fileName) + "   ***   filename = " + fileName + "   ***");
+
+  	  System.out.println("------------     android System  end     ------------") ;
+	}
+	
+
+	  public String getFileMD5(String file) {
+		  try {
+			  InputStream in = this.getAssets().open(file);
+		  	  MessageDigest digest = null;
+//		  	  FileInputStream in = null;
+		  	  byte buffer[] = new byte[1024];
+		  	  int len;
+		  	  try {
+		  	   digest = MessageDigest.getInstance("MD5");
+//		  	   in = new FileInputStream(file);
+		  	   while ((len = in.read(buffer, 0, 1024)) != -1) {
+		  	    digest.update(buffer, 0, len);
+		  	   }
+		  	   in.close();
+		  	  } catch (Exception e) {
+		  	   e.printStackTrace();
+		  	   return null;
+		  	  }
+		  	  BigInteger bigInt = new BigInteger(1, digest.digest());
+		  	  return bigInt.toString(16);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return null ;
+		}
+	  }
+		
 }
