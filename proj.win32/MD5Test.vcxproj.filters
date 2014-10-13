@@ -10,6 +10,18 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\cell">
+      <UniqueIdentifier>{958cf462-6445-4e54-bd9b-0ed95f6c78a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\quick">
+      <UniqueIdentifier>{1cc5e406-4819-4f96-b7b3-8586fe55b5c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\quick\md5">
+      <UniqueIdentifier>{ed4c5118-3f2b-43d9-8e44-59f1d4ef1802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\cell\md5">
+      <UniqueIdentifier>{54844d65-07e3-4843-9a5f-e789b425390b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,6 +33,18 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\cell\md5\md5.c">
+      <Filter>Classes\cell\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\cell\CellMD5.cpp">
+      <Filter>Classes\cell</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\quick\QuickMD5.cpp">
+      <Filter>Classes\quick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\quick\md5\md5.c">
+      <Filter>Classes\quick\md5</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -31,6 +55,18 @@
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cell\md5\md5.h">
+      <Filter>Classes\cell\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\cell\CellMD5.h">
+      <Filter>Classes\cell</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\quick\QuickMD5.h">
+      <Filter>Classes\quick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\quick\md5\md5.h">
+      <Filter>Classes\quick\md5</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
